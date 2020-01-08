@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bibi | Cadastro de Clientes</title>
+    <link rel="stylesheet" href="css/cadastrocliente.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: rgb(45, 186, 231)">
+        <a class="navbar-brand" href="#">
+            <img src="img/logomarca bibi peças.png" width="130" class="ml-5" alt="">
+        </a>
+        <div id="app2">
+            <span class="navbar-text mr-sm-2" :style="titulonav">
+            CADASTRO DE CLIENTES
+          </span>
+        </div>
+    </nav>
+    <br><br>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-7" id="borda">
+                <h2 :style="titulocliente">Bastos Juntas</h2>
+                <p :style="corefonte">00.000/00001-00</p>
+                <p :style="corefonte">bastosjuntas.bibipecas.com.br</p>
+            </div>
+            <div class="col-5" style="position: relative; right: 255px;">
+                <p :style="tempoexpiracao">Tempo para Expiração</p>
+                <button type="button" class="btn btn-primary col-5 ml-2">8d 22h 30m 45s</button><br>
+                <button type="button" class="btn btn-secondary col-5 ml-2">Editar</button>
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-7" id="borda">
+                <h2 :style="titulocliente">Dispemec</h2>
+                <p :style="corefonte">00.000/00001-00</p>
+                <p :style="corefonte">bastosjuntas.bibipecas.com.br</p>
+            </div>
+            <div class="col-5" style="position: relative; right: 255px;">
+                <p :style="tempoexpiracao">Tempo para Expiração</p>
+                <button type="button" class="btn btn-primary col-5 ml-2">Ilimitado</button><br>
+                <button type="button" class="btn btn-secondary col-5 ml-2">Editar</button>
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-7" id="borda">
+                <h2 :style="titulocliente">Ac Araújo</h2>
+                <p :style="corefonte">00.000/00001-00</p>
+                <p :style="corefonte">bastosjuntas.bibipecas.com.br</p>
+            </div>
+            <div class="col-5" style="position: relative; right: 255px;">
+                <p :style="tempoexpiracao">Tempo para Expiração</p>
+                <button type="button" class="btn btn-danger col-5 ml-2">Expirado</button><br>
+                <button type="button" class="btn btn-secondary col-5 ml-2">Editar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html"><button type="button" class="btn btn-secondary col-1" style="position: relative; right: -1100px;">VOLTAR</button></a>
+    </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src=" https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="js/vuejs.js"></script>
+    <script src="js/vuejs-pesquisar_cliente.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bibi | Cadastro de Clientes</title>
+    <link rel="stylesheet" href="css/cadastrocliente.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: rgb(45, 186, 231)">
+        <a class="navbar-brand" href="#">
+            <img src="img/logomarca bibi peças.png" width="130" class="ml-5" alt="">
+        </a>
+        <div id="app2">
+            <span class="navbar-text mr-sm-2" :style="titulonav">
+            CADASTRO DE CLIENTES
+          </span>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <div class="container" id="application">
+        <div class="row">
+            <div class="col-8">
+                <form class="form-group ">
+                    <input class="form-control col-7" type="text" placeholder="Nome da Matriz:">
+                    <input class="form-control col-7" type="text" placeholder="CNPJ:">
+                    <input class="form-control col-7" type="text" placeholder="Endereço:">
+
+                    <div class="row col-8">
+                        <input class="form-control col-6" type="text" placeholder="Cidade:">
+                        <input class="form-control col-5 ml-2" type="text" placeholder="Estado:">
+                    </div>
+                    <div class="input-group-prepend">
+                        <input type="text" class="form-control col-4" id="inlineFormInputGroup" placeholder="Link:">
+                        <div class="input-group-text col-3">.bibipecas.com.br</div>
+                    </div>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <div class="form-group row">
+                        <div class="col">
+                            <input class="form-control col-10" type="date" id="example-date-input">
+                        </div>
+                        <div class="form-check col-8">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Ilimitado
+                            </label>
+                        </div>
+                        <br><br>
+                        <button type="button" class="btn btn-secondary ml-3" v-on:click="filial()" id="adcfilial">Adicionar Filial</button>
+                    </div>
+
+                </form>
+                <br>
+                <form class="form-group" style="display: none;" id="adicionarfilial">
+                    <input class="form-control col-7" type="text" placeholder="Nome da Filial:">
+                    <input class="form-control col-7" type="text" placeholder="CNPJ:">
+                    <input class="form-control col-7" type="text" placeholder="Endereço:">
+
+                    <div class="row col-8">
+                        <input class="form-control col-6" type="text" placeholder="Cidade:">
+                        <input class="form-control col-5 ml-2" type="text" placeholder="Estado:">
+                    </div>
+                    <br>
+                    <div class="row col-8">
+                        <button type="button" class="btn btn-secondary ml" id="botaoadcfilial" v-on:click="adicionafilial()">Adicionar Filial</button>
+                        <button type="button" class="btn btn-danger ml-5" v-on:click="removefilial()" id="botaoremovefilial">Remover</button>
+                    </div>
+                </form>
+                <br>
+                <div id="oi"></div>
+            </div>
+
+            <div class="col-4">
+                <form class="form-group">
+                    <input class="form-control col-11" type="text" placeholder="Nome do Vendedor:">
+                    <input class="form-control col-11" type="text" placeholder="Whatsapp:">
+                    <br>
+                    <button type="button" class="btn btn-secondary ml" id="maisvendedor" v-on:click="vendedor()">+ Vendedor</button>
+                </form>
+
+                <br>
+                <form class="form-group" style="display: none;" id="maisvend">
+                    <input class="form-control col-11" type="text" placeholder="Nome do Vendedor:">
+                    <input class="form-control col-11" type="text" placeholder="Whatsapp:">
+                    <br>
+                    <div class="row col-11">
+                        <button type="button" class="btn btn-secondary ml" id="botaomaisvend">+ Vendedor</button>
+                        <button type="button" class="btn btn-danger ml-5" v-on:click="removevendedor()" id="botaoremovevend">Remover</button>
+                    </div>
+                </form>
+                <br><br><br><br><br><br><br><br><br>
+
+                <footer>
+                    <button type="button" class="btn btn-success col-4" style="position: relative; right: -300px;">SALVAR</button>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src=" https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="js/vuejs.js"></script>
+    <script src="js/vuejs-novocliente.js"></script>
+</body>
+
+</html>
